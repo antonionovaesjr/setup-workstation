@@ -1,5 +1,4 @@
 #!/bin/bash
-# Creado por Antonio Novaes
 
 #Update S.O
 sudo zypper dup
@@ -12,10 +11,10 @@ sudo zypper refresh
 
 # User resource (codec, editor)
 sudo zypper dist-upgrade --from packman --allow-downgrade --allow-vendor-change
-sudo zypper install --from packman ffmpeg gstreamer-plugins-bad gstreamer-plugins-libav gstreamer-plugins-ugly libavcodec58 libavdevice58 libavfilter7 libavformat58 libavresample4 libavutil56 vlc-codecs hplip -y
+sudo zypper install --from packman ffmpeg gstreamer-plugins-bad gstreamer-plugins-libav gstreamer-plugins-ugly libavcodec58 libavdevice58 libavfilter7 libavformat58 libavresample4 libavutil56 vlc-codecs hplip rclone 
 
 #Devops Tools
-sudo zypper install git ansible vlc docker docker-compose patterns-server-kvm_server patterns-server-kvm_tools vagrant vagrant-bash-completion vagrant-emacs vagrant-vim -y
+sudo zypper install git ansible vlc docker docker-compose patterns-server-kvm_server patterns-server-kvm_tools vagrant vagrant-bash-completion vagrant-emacs vagrant-vim 
 sudo gpasswd -a $(whoamin) docker
 
 systemctl enable docker
@@ -29,15 +28,15 @@ docker pull owasp/zap2docker-stable:2.9.0
 docker pull portainer/portainer:1.23.2
 
 #Office Tools
-sudo zypper install libreoffice libreoffice-l10n-pt_BR cups keepassxc zoom_openSUSE_x86_64.rpm google-chrome-stable_current_x86_64.rpm teams-1.3.00.5153-1.x86_64.rpm -y
-sudo zypper install patterns-devel-java-devel_java libwebkitgtk-1_0-0 -y
-#sudo zypper install megasync-openSUSE_Leap_15.0.x86_64.rpm -y
-#sudo zyyper install dolphin-megasync-openSUSE_Leap_15.0.x86_64.rpm -y
+sudo zypper install libreoffice libreoffice-l10n-pt_BR cups keepassxc zoom_openSUSE_x86_64.rpm google-chrome-stable_current_x86_64.rpm teams-1.3.00.5153-1.x86_64.rpm 
+sudo zypper install patterns-devel-java-devel_java libwebkitgtk-1_0-0 
+#sudo zypper install megasync-openSUSE_Leap_15.0.x86_64.rpm
+#sudo zyyper install --no-gpgp-checks  dolphin-megasync-openSUSE_Leap_15.0.x86_64.rpm
 
 
 #Sysadmin, Developer and 
-sudo zypper install code-1.44.2-1587059974.el7.x86_64.rpm ICAClient-suse-13.8.0.10299729-0.x86_64.rpm -y 
-sudo zypper install teamviewer-suse_15.4.4445.x86_64.rpm  -y
+sudo zypper install code-1.44.2-1587059974.el7.x86_64.rpm ICAClient-suse-13.8.0.10299729-0.x86_64.rpm  
+sudo zypper install teamviewer-suse_15.4.4445.x86_64.rpm  
 
 
 
