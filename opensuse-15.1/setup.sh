@@ -28,7 +28,7 @@ docker pull owasp/zap2docker-stable:2.9.0
 docker pull portainer/portainer:1.23.2
 
 #Office Tools
-sudo zypper install libreoffice vlc libreoffice-l10n-pt_BR cups keepassxc 
+sudo zypper install libreoffice vlc libreoffice-l10n-pt_BR cups keepassxc kmail
 sudo zypper install zoom_openSUSE_x86_64.rpm google-chrome-stable_current_x86_64.rpm teams-1.3.00.5153-1.x86_64.rpm 
 sudo zypper install patterns-devel-java-devel_java libwebkitgtk-1_0-0 
 sudo zypper install megasync-openSUSE_Leap_15.0.x86_64.rpm
