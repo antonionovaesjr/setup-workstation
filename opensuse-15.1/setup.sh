@@ -2,6 +2,7 @@
 #Update S.O
 sudo zypper dup
 
+<<<<<<< HEAD
 #Config repo
 sudo zypper addrepo https://download.opensuse.org/repositories/home:olh/openSUSE_15.1/home:olh.repo
 sudo zypper addrepo --refresh --priority 90 https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_15.1/packman.repo
@@ -12,6 +13,21 @@ sudo zypper refresh
 sudo zypper dist-upgrade --from packman --allow-downgrade --allow-vendor-change
 sudo zypper install --from packman ffmpeg gstreamer-plugins-bad gstreamer-plugins-libav gstreamer-plugins-ugly libavcodec58 libavdevice58 libavfilter7 libavformat58 libavresample4 libavutil56 vlc-codecs hplip rclone 
 
+=======
+#Update S.O
+sudo zypper dup
+
+#Config repo
+sudo zypper addrepo https://download.opensuse.org/repositories/home:olh/openSUSE_15.1/home:olh.repo
+sudo zypper addrepo --refresh --priority 90 https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_15.1/packman.repo
+sudo zypper --gpg-auto-import-keys refresh 
+sudo zypper refresh
+
+# User resource (codec, editor)
+sudo zypper dist-upgrade --from packman --allow-downgrade --allow-vendor-change
+sudo zypper install --from packman ffmpeg gstreamer-plugins-bad gstreamer-plugins-libav gstreamer-plugins-ugly libavcodec58 libavdevice58 libavfilter7 libavformat58 libavresample4 libavutil56 vlc-codecs hplip rclone 
+
+>>>>>>> 2a43718d68ff8c97619921567e7c53a37df140de
 #Devops Tools
 sudo zypper install git ansible vlc docker docker-compose patterns-server-kvm_server patterns-server-kvm_tools vagrant vagrant-bash-completion vagrant-emacs vagrant-vim 
 sudo gpasswd -a $(whoamin) docker
