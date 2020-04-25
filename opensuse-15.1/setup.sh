@@ -30,12 +30,15 @@ docker pull portainer/portainer:1.23.2
 #Office Tools
 sudo zypper install libreoffice vlc libreoffice-l10n-pt_BR cups keepassxc kmail
 sudo zypper install zoom_openSUSE_x86_64.rpm google-chrome-stable_current_x86_64.rpm teams-1.3.00.5153-1.x86_64.rpm 
-sudo zypper install patterns-devel-java-devel_java libwebkitgtk-1_0-0 
+sudo zypper install libwebkitgtk-1_0-0 
 sudo zypper install megasync-openSUSE_Leap_15.0.x86_64.rpm
 sudo zyyper install --no-gpgp-checks  dolphin-megasync-openSUSE_Leap_15.0.x86_64.rpm
 
 
-#Sysadmin, Developer and 
+#Sysadmin and Developer
+sudo zypper install patterns-devel-java-devel_java
+wget https://dbeaver.io/files/dbeaver-ce-latest-stable.x86_64.rpm -O dbeaver-ce-latest-stable.x86_64.rpm
+sudo zypper install dbeaver-ce-latest-stable.x86_64.rpm
 sudo zypper install code-1.44.2-1587059974.el7.x86_64.rpm ICAClient-suse-13.8.0.10299729-0.x86_64.rpm  
 sudo zypper install teamviewer-suse_15.4.4445.x86_64.rpm  
 
