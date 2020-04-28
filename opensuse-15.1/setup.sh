@@ -29,21 +29,41 @@ docker pull portainer/portainer:1.23.2
 
 #Office Tools
 sudo zypper install libreoffice vlc libreoffice-l10n-pt_BR cups keepassxc kmail
-sudo zypper install zoom_openSUSE_x86_64.rpm google-chrome-stable_current_x86_64.rpm teams-1.3.00.5153-1.x86_64.rpm 
-sudo zypper install libwebkitgtk-1_0-0 
+
+wget https://github.com/antonionovaesjr/setup-workstation/raw/master/opensuse-15.1/zoom_openSUSE_x86_64.rpm -O zoom_openSUSE_x86_64.rpm
+sudo zypper install zoom_openSUSE_x86_64.rpm 
+
+wget https://github.com/antonionovaesjr/setup-workstation/raw/master/opensuse-15.1/google-chrome-stable_current_x86_64.rpm -O google-chrome-stable_current_x86_64.rpm
+sudo zypper install google-chrome-stable_current_x86_64.rpm
+
+wget https://github.com/antonionovaesjr/setup-workstation/raw/master/opensuse-15.1/teams-1.3.00.5153-1.x86_64.rpm -O teams-1.3.00.5153-1.x86_64.rpm
+sudo zypper install teams-1.3.00.5153-1.x86_64.rpm
+
+wget https://github.com/antonionovaesjr/setup-workstation/raw/master/opensuse-15.1/megasync-openSUSE_Leap_15.0.x86_64.rpm -O megasync-openSUSE_Leap_15.0.x86_64.rpm
 sudo zypper install megasync-openSUSE_Leap_15.0.x86_64.rpm
+
+wget https://github.com/antonionovaesjr/setup-workstation/raw/master/opensuse-15.1/dolphin-megasync-openSUSE_Leap_15.0.x86_64.rpm -O dolphin-megasync-openSUSE_Leap_15.0.x86_64.rpm
 sudo zyyper install dolphin-megasync-openSUSE_Leap_15.0.x86_64.rpm
+
+sudo zypper install libwebkitgtk-1_0-0 
 
 
 #Sysadmin and Developer
 sudo zypper install patterns-devel-java-devel_java
 wget https://dbeaver.io/files/dbeaver-ce-latest-stable.x86_64.rpm -O dbeaver-ce-latest-stable.x86_64.rpm
 sudo zypper install dbeaver-ce-latest-stable.x86_64.rpm
-sudo zypper install code-1.44.2-1587059974.el7.x86_64.rpm ICAClient-suse-13.8.0.10299729-0.x86_64.rpm  
+
+wget https://github.com/antonionovaesjr/setup-workstation/raw/master/opensuse-15.1/code-1.44.2-1587059974.el7.x86_64.rpm -O code-1.44.2-1587059974.el7.x86_64.rpm
+sudo zypper install code-1.44.2-1587059974.el7.x86_64.rpm 
+
+wget https://github.com/antonionovaesjr/setup-workstation/raw/master/opensuse-15.1/ICAClient-suse-13.8.0.10299729-0.x86_64.rpm -O ICAClient-suse-13.8.0.10299729-0.x86_64.rpm
+sudo zypper install ICAClient-suse-13.8.0.10299729-0.x86_64.rpm
+
+wget https://github.com/antonionovaesjr/setup-workstation/raw/master/opensuse-15.1/teamviewer-suse_15.4.4445.x86_64.rpm -O teamviewer-suse_15.4.4445.x86_64.rpm
 sudo zypper install teamviewer-suse_15.4.4445.x86_64.rpm  
 
 
 
-mkdir -p ~/Workspace/{GitHub,Lab}
+mkdir -p ~/Workspace/{GitHub,Lab,DockerVolume}
 sudo mv /opt/Citrix/ICAClient/keystore/cacerts /opt/Citrix/ICAClient/keystore/cacerts-backup
 sudo ln -s /etc/ssl/certs /opt/Citrix/ICAClient/keystore/cacerts
